@@ -1,10 +1,11 @@
 services:
   - type: web
-    name: backend-lb
+    name: admindashbord-backend-lb
     env: docker
     plan: free
     region: oregon
     dockerfilePath: ./Dockerfile
+    autoDeploy: true
     envVars:
       - key: PORT
         value: 8081

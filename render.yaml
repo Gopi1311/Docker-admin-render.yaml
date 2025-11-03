@@ -2,10 +2,7 @@ services:
   - type: web
     name: nginx-loadbalancer
     env: docker
-    region: oregon
     plan: free
-    buildCommand: ""
-    startCommand: ""
     dockerfilePath: ./nginx/Dockerfile
     buildContext: ./nginx
     envVars:

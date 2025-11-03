@@ -1,11 +1,13 @@
 services:
   - type: web
-    name: admindashbord-backend-lb
+    name: nginx-loadbalancer
     env: docker
-    plan: free
     region: oregon
-    dockerfilePath: ./Dockerfile
-    autoDeploy: true
+    plan: free
+    buildCommand: ""
+    startCommand: ""
+    dockerfilePath: ./nginx/Dockerfile
+    buildContext: ./nginx
     envVars:
       - key: PORT
         value: 8081

@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: nginx-lb
+    name: admindashbord-nginx-lb
     env: docker
     plan: free
-    dockerfilePath: ./nginx/Dockerfile
-    region: oregon
-    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8081

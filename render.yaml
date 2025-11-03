@@ -1,10 +1,8 @@
 services:
   - type: web
-    name: nginx-loadbalancer
+    name: nginx-lb
     env: docker
     plan: free
     dockerfilePath: ./nginx/Dockerfile
-    buildContext: ./nginx
-    envVars:
-      - key: PORT
-        value: 8081
+    region: oregon
+    autoDeploy: true

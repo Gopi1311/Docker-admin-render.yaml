@@ -1,7 +1,10 @@
 FROM nginx:alpine
 
-# Copy nginx.conf from the same folder
+# Copy main nginx.conf
 COPY nginx.conf /etc/nginx/nginx.conf
+
+# Copy load balancer config
+COPY backend_lb.conf /etc/nginx/conf.d/backend_lb.conf
 
 EXPOSE 8081
 
